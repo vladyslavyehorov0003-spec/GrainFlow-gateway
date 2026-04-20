@@ -1,0 +1,10 @@
+.gradle/
+build/
+.idea/
+.vscode/
+.DS_Store
+*.log
+.env
+.env.*
+# dev config not needed in Docker image
+src/main/resources/application-dev.yml

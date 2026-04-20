@@ -1,0 +1,11 @@
+# Actuator — show full health details locally
+management:
+  endpoint:
+    health:
+      show-details: always
+
+# Verbose logging in dev
+logging:
+  level:
+    com.grainflow.gateway: DEBUG
+    org.springframework.web: DEBUG

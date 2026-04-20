@@ -1,0 +1,11 @@
+# Don't expose details to anonymous requests
+management:
+  endpoint:
+    health:
+      show-details: when-authorized
+
+# Logging — minimal in prod
+logging:
+  level:
+    root: WARN
+    com.grainflow: INFO

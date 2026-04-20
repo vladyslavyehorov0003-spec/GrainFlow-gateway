@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment / secrets — NEVER commit actual secret values
+.env
+.env.*
+# yml config files are safe to commit — they contain only ${ENV_VAR} placeholders
+
+# Java
+*.class

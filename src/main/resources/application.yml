@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: ${PORT:8080}
+
+# Internal service URLs — overridden per environment
+services:
+  auth:
+    url: ${AUTH_SERVICE_URL:http://localhost:8081}
+  warehouse:
+    url: ${WAREHOUSE_SERVICE_URL:http://localhost:8082}
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
