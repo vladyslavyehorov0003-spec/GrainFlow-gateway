@@ -14,7 +14,12 @@ public class CorsConfig {
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost:3000");
+        config.setAllowedOriginPatterns(java.util.List.of(
+                "http://localhost:3000",
+                "https://grainflowapp.com",
+                "https://www.grainflowapp.com",
+                "https://*.vercel.app"
+        ));
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         config.setAllowCredentials(true);
