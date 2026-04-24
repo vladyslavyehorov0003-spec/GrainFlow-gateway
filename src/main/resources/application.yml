@@ -11,6 +11,8 @@ services:
     url: ${AUTH_SERVICE_URL:http://localhost:8081}
   warehouse:
     url: ${WAREHOUSE_SERVICE_URL:http://localhost:8082}
+  payment:
+    url: ${PAYMENT_SERVICE_URL:http://localhost:8083}
 
 # Actuator
 management:
