@@ -33,6 +33,8 @@ public class ProxyFilter extends OncePerRequestFilter {
 
     @Value("${services.warehouse.url}")
     private String warehouseUrl;
+    @Value("${services.payment.url}")
+    private String paymentUrl;
 
     public ProxyFilter() {
         this.restClient = RestClient.create();
@@ -98,6 +100,9 @@ public class ProxyFilter extends OncePerRequestFilter {
     private String resolveTarget(String path) {
         if (path.startsWith("/api/v1/auth/") || path.startsWith("/api/v1/users/")) {
             return authUrl;
+        }
+        if (path.startsWith("/api/v1/payments")) {
+            return paymentUrl;
         }
         if (path.startsWith("/api/v1/")) {
             return warehouseUrl;
