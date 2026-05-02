@@ -20,3 +20,18 @@ management:
     web:
       exposure:
         include: health,info
+
+# Swagger UI — single entry point for all services.
+# Each url points to our proxy endpoint that rewrites "servers" to /api/v1,
+# so "Try it out" always goes through this gateway.
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: Warehouse Service
+        url: /v3/api-docs/warehouse
+      - name: Auth Service
+        url: /v3/api-docs/auth
+      - name: Payment Service
+        url: /v3/api-docs/payments
+    urls-primary-name: Warehouse Service   # shown first on open
