@@ -36,6 +36,8 @@ public class ProxyFilter extends OncePerRequestFilter {
             "/api/v1/auth/refresh",
             "/api/v1/auth/verify",
             "/api/v1/auth/resend-verification",
+            "/api/v1/auth/forgot-password",
+            "/api/v1/auth/reset-password",
             "/api/v1/payments/webhook",
             "/swagger-ui",
             "/v3/api-docs",
